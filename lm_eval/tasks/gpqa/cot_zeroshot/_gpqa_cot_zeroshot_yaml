@@ -12,7 +12,7 @@ filter_list:
   - name: "strict-match"
     filter:
       - function: "regex"
-        regex_pattern: "(?<=The answer is )(.*)(?=.)"
+        regex_pattern: "(?<=answer is )(.*)(?=.)"
       - function: "take_first"
   - name: "flexible-extract"
     filter:
@@ -24,7 +24,7 @@ filter_list:
       - function: "take_first"
 generation_kwargs:
   until:
-    - "</s>"
+    - "<|eot|>"
   do_sample: false
   temperature: 0.0
 num_fewshot: 0

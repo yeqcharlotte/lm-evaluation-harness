@@ -7,7 +7,7 @@ doc_to_target: "answer"
 process_results: !function utils.process_results
 generation_kwargs:
   until:
-    - "<|endoftext|>"
+    - "<|eot|>"
   temperature: 0.0
   do_sample: false
   max_gen_toks: 512
